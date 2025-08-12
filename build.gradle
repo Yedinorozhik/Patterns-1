@@ -27,6 +27,7 @@ dependencies {
     testAnnotationProcessor("org.projectlombok:lombok:1.18.38")
     testImplementation 'org.slf4j:slf4j-simple:1.7.32'
 
+
 }
 
 test {
