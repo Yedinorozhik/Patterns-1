@@ -38,6 +38,9 @@ public class GeneratorTest {
                 .shouldBe(Condition.visible);
         $("[data-test-id='date'] input").press(Keys.chord(Keys.SHIFT, Keys.HOME, Keys.DELETE)).setValue(newDate);
         $("button.button").click();
+        $("[data-test-id='replan-notification'] .notification__content")
+                .shouldHave(Condition.text("У вас уже запланирована встреча на другую дату. Перепланировать?"))
+                .shouldBe(Condition.visible);
         $("button.button").click();
         $("[data-test-id='success-notification'] .notification__content")
                 .shouldHave(Condition.text("Встреча успешно запланирована на " + newDate))
